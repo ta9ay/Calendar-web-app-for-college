@@ -1,0 +1,388 @@
+html, body {
+  font-family:'Open Sans', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+  height: 100%;
+  
+  
+  
+  background-position: center center;
+  
+
+  background-repeat: no-repeat;
+  
+ 
+  background-attachment: fixed;
+  
+  
+  background-size: cover;
+  
+  background-color: #1f253d;
+}
+
+
+
+
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  background-color:transparent; #394263; #303030;
+  float: left;
+  width: 350px;
+  min-width: 140px;
+
+  
+  height: 100%;
+  flex: 1;
+}
+
+#calendar{
+  border-radius: 2px;
+float: right;
+background: #394263;
+width: 980px;
+height: 800px;
+margin-bottom: 20px;
+-moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+margin-right: 50px;
+padding:20px;
+padding-top: 30px;
+}
+
+.topbar{
+  border-radius: 2px;
+float:right;
+background: #316bab;
+width: 980px;
+height: 50px;
+margin-bottom: 20px;
+
+margin-right: 50px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.username{
+  font-family: 'Gloria Hallelujah', cursive;
+  line-height: 50px;
+  margin:0px;
+  padding:0px;
+  color: white;
+  width: 700px;
+  float:left;
+  font-size: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  
+}
+
+.options{
+ border-radius: 2px;
+  background: #394263;
+  height: 400px;
+  width: 250px;
+  position: relative;
+  top: 0px;
+  width: 300px;
+  margin-left: 50;
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  
+  overflow-x: hidden;
+
+
+
+  
+}
+
+.logo img{
+  width: 150px;
+  height:150px;
+  display: block;
+  margin-left:125px;
+  padding-top: 20px;
+
+
+}
+
+
+
+.masthead{
+  background:#10a8ab; 316bab
+  height: 50px;
+  width:inherit;
+  border-radius: 2px 2px;
+}
+
+
+#list{
+  margin-top: 0px;
+  height:50px;
+  background-color:; #394263;
+
+
+}
+.scroll-list{
+  overflow-y: auto;
+  margin:0px;
+  width: inherit;
+  height:350px;
+
+}
+#list:hover{
+  background-color: #2b324d
+
+}
+p.listname{
+ position: relative;
+line-height: 50px;
+ margin:0px;
+  width: 150px;
+  float:left;
+  font-family:'Open Sans', sans-serif;
+  color: #7181bc;
+  font-size:80%;
+  left: 25px;
+
+}
+
+#list:hover .listname{
+  color:white;
+}
+#list:hover .material-icons{
+  opacity: 1;
+ }
+ #list:active{
+  border-left: 6px solid #3368ae;
+ }
+
+.listoptions{
+  height: 50px;
+  width: 80px;
+  float: right;
+}
+
+.settings{
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  margin: 0px;
+  float:left;
+  margin-top: 5px;
+  border:0px;
+}
+  .add{
+    background:transparent;
+  height: 40px;
+  width: 40px;
+  margin: 0px;
+  float:right;
+  margin-top: 5px;
+  border:0px;
+
+}
+
+
+.material-icons{
+  color: white;
+  margin:0px;
+ }
+
+ i.material-icons{
+  padding-left: auto;
+  padding-right: auto;
+  
+  opacity: 0.7;
+ }
+
+ .logo{
+  width:inherit;
+  height:200px;
+  
+ }
+
+
+ p.text_headings{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 17px;
+  margin:0px;
+  
+  text-align: center;
+  line-height: 50px;
+
+ }
+
+ .new_group{
+  border-radius: 2px;
+  width: 300px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: 50px;
+  background:#e64c66;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ .newgrp_logo{
+  float: left;
+  height:inherit;
+  width: 50px;
+  padding-left: 20px;
+ }
+
+ .newgrp_logo .material-icons{
+  padding-top: 13px;
+ }
+
+ .create_group{
+  float:right;
+  height: inherit;
+  width: 230px;
+ }
+
+ p.creategroup{
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 15px;
+  margin:0px;
+  line-height: 50px;
+  font-weight: 900;
+ }
+
+ 
+
+ .new_group:hover{
+  background-color: #cc324c
+
+ }
+ .new_group:hover .material-icons{
+  opacity: 1;
+ }
+
+
+
+/* ==== top bar ==== */
+
+.display-picture{
+  float:left;
+  height: 50px;
+  width:80px; 
+}
+
+
+.display-picture img{
+
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  
+}
+
+.logout{
+  
+  font-family: 'Open Sans', sans-serif;
+  color:white;
+
+  float:left;
+  height: 50px;
+  width: 200px;
+}
+
+.logout p{
+  text-align: right;
+  padding-right: 50px;
+  line-height: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+/*================ CALENDAR ============= */
+.fc-left h2{
+  color:white;
+}
+
+.fc-unthemed td.fc-today{
+  background:#cc324c; 
+}
+
+
+.fc table{
+  color: white;
+
+}
+
+.fc-sun{
+  background: #e64c66;
+}
+
+
+.fc-center{
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- scrollbar --------------------- */
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(73,74,77,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(73,74,77,0.4); 
+}
+
+
+
+
