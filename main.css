@@ -7,6 +7,7 @@ html, body {
   
   
   
+  
   background-position: center center;
   
 
@@ -17,8 +18,8 @@ html, body {
   
   
   background-size: cover;
-  
-  background-color: #1f253d;
+  background-image: url("blur.jpg");
+  background-color: #d7e1ea;
 }
 
 
@@ -43,7 +44,7 @@ html, body {
 #calendar{
   border-radius: 2px;
 float: right;
-background: #394263;
+background: #f0f5f9;
 width: 980px;
 height: 800px;
 margin-bottom: 20px;
@@ -60,7 +61,7 @@ padding-top: 30px;
 .topbar{
   border-radius: 2px;
 float:right;
-background: #316bab;
+background: #121921;
 width: 980px;
 height: 50px;
 margin-bottom: 20px;
@@ -70,7 +71,7 @@ margin-right: 50px;
 }
 
 .username{
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: 'Open Sans', cursive;
   line-height: 50px;
   margin:0px;
   padding:0px;
@@ -84,7 +85,7 @@ margin-right: 50px;
 
 .options{
  border-radius: 2px;
-  background: #394263;
+  background: #293541;
   height: 400px;
   width: 250px;
   position: relative;
@@ -115,14 +116,14 @@ margin-right: 50px;
 
 
 .masthead{
-  background:#10a8ab; 316bab
+  background:#498ad5; 316bab
   height: 50px;
   width:inherit;
   border-radius: 2px 2px;
 }
 
 
-#list{
+.list{
   margin-top: 0px;
   height:50px;
   background-color:; #394263;
@@ -136,30 +137,80 @@ margin-right: 50px;
   height:350px;
 
 }
-#list:hover{
+.list:hover{
   background-color: #2b324d
 
 }
-p.listname{
+p.event{
  position: relative;
 line-height: 50px;
  margin:0px;
   width: 150px;
   float:left;
   font-family:'Open Sans', sans-serif;
-  color: #7181bc;
+  color: #bbbfc2;
   font-size:80%;
   left: 25px;
 
 }
 
-#list:hover .listname{
+.list:hover .event{
   color:white;
 }
-#list:hover .material-icons{
+p.council{
+ position: relative;
+line-height: 50px;
+ margin:0px;
+  width: 150px;
+  float:left;
+  font-family:'Open Sans', sans-serif;
+  color: #bbbfc2;
+  font-size:80%;
+  left: 25px;
+
+}
+
+.list:hover .council{
+  color:white;
+}
+
+p.class{
+ position: relative;
+line-height: 50px;
+ margin:0px;
+  width: 150px;
+  float:left;
+  font-family:'Open Sans', sans-serif;
+  color: #bbbfc2;
+  font-size:80%;
+  left: 25px;
+
+}
+
+.list:hover .class{
+  color:white;
+}
+p.all{
+ position: relative;
+line-height: 50px;
+ margin:0px;
+  width: 150px;
+  float:left;
+  font-family:'Open Sans', sans-serif;
+  color: #bbbfc2;
+  font-size:80%;
+  left: 25px;
+
+}
+
+.list:hover .all{
+  color:white;
+}
+
+.list:hover .material-icons{
   opacity: 1;
  }
- #list:active{
+ .list:active{
   border-left: 6px solid #3368ae;
  }
 
@@ -314,22 +365,23 @@ line-height: 50px;
 }
 
 .fc-unthemed td.fc-today{
-  background:#cc324c; 
+  background:#d1e2f0;
 }
 
 
 .fc table{
-  color: white;
+  color: #293541;
 
 }
 
-.fc-sun{
-  background: #e64c66;
+th.fc-day-header.fc-widget-header.fc-sun{
+  background:#ff5656;
+  
 }
 
 
 .fc-center{
-  color:white;
+  color:#293541;
 }
 
 
