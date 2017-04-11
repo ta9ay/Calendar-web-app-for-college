@@ -1,10 +1,39 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+
   var date = new Date();
   var d = date.getDate();
   var m = date.getMonth();
   var y = date.getFullYear();
 
+
+  //---------------------------------------------------------
+  var fcSources = {
+    event: {
+                url: 'http://localhost/fullcalendar/event.php',
+                type: 'GET',
+                color: 'red'
+               
+            },
+    class: {
+                url: 'http://localhost/fullcalendar/class.php',
+                type: 'GET',
+                
+            },
+    council: {
+                url: 'http://localhost/fullcalendar/council.php',
+                type: 'GET',
+                color:'green'
+                
+            },
+ 
+};
+
+//------------------------------------------------------------
+
+
   var calendar = $('#calendar').fullCalendar({
+
    editable: true,
    header: {
     left: 'prev,next today',
@@ -12,14 +41,25 @@ $(document).ready(function() {
     right: 'month'
    },
    
-   events: "http://localhost/fullcalendar/events.php",
+   eventSources: [ fcSources.event, fcSources.class, fcSources.council],
    editable: true,
+   eventLimit: true,
+
+
+
+
+
+
+
    // Convert the allDay from string to boolean
    eventRender: function(event, element, view) {
-    if (event.allDay === 'true') {
-     event.allDay = true;
-    } else {
-     event.allDay = false;
+      if (event.allDay === 'true') 
+      {
+          event.allDay = true;
+      }  
+      else 
+      {
+       event.allDay = false;
     }
    },
    selectable: true,
@@ -43,14 +83,15 @@ $(document).ready(function() {
          title: title,
          start: start,
          end: end,
-         allDay: allDay
+         allDay: allDay,
+         color:'red'
        },
        true
        );
     }
     calendar.fullCalendar('unselect');
   },
-   
+    
    
    eventDrop: function(event, delta) {
    var start = $.fullCalendar.formatDate(event.start, "yyyy-MM-dd HH:mm:ss");
@@ -79,5 +120,74 @@ $(document).ready(function() {
 }
    
   });
+
+
+          $(".event").click(function(){
+                
+                
+                
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.event );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.class );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.council);
+                $('#calendar').fullCalendar( 'addEventSource', fcSources.event);
+                $('#calendar').fullCalendar( 'refetchEvents' );                
+                
+                
+                
+
+         
+    });
+
+$(".class").click(function(){
+                
+                
+                
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.event );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.class );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.council );
+                $('#calendar').fullCalendar( 'addEventSource', fcSources.class);
+                $('#calendar').fullCalendar( 'refetchEvents' );                
+                
+
+         
+
+         
+    });
+
+$(".council").click(function(){
+                
+                
+                
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.event );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.class );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.council );
+                $('#calendar').fullCalendar( 'addEventSource', fcSources.council);
+                $('#calendar').fullCalendar( 'refetchEvents' );                
+                
+
+         
+
+         
+    });
+ 
+ $(".all").click(function(){
+                
+                
+                
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.event );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.class );
+                $('#calendar').fullCalendar( 'removeEventSource', fcSources.council );
+                $('#calendar').fullCalendar( 'addEventSource', fcSources.class);
+                $('#calendar').fullCalendar( 'addEventSource', fcSources.event);
+                 $('#calendar').fullCalendar( 'addEventSource', fcSources.council);
+                $('#calendar').fullCalendar( 'refetchEvents' );                
+                
+
+         
+
+         
+    });
+
+
   
  });
