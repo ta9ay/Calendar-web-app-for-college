@@ -122,7 +122,7 @@ $(document).ready(function () {
   });
 
 
-          $(".event").click(function(){
+$(".event").click(function(){
                 
                 
                 
